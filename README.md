@@ -1,8 +1,21 @@
-# Forge Hello World
+# Jira Project Assistant
 
-This project contains a Forge app written in JavaScript that displays `Hello World!` in a Jira global page.
+This project contains a Forge app written in JavaScript in a Jira global page.
 
 See [developer.atlassian.com/platform/forge/](https://developer.atlassian.com/platform/forge) for documentation and tutorials explaining Forge.
+
+## Screenshots
+
+This is the main page with selected project named "test" and two task in one:
+
+![Main page](screenshots/image1.png)
+
+It's team tab
+
+![Team tab](screenshots/image2.png)
+
+Modal where you can fix problems with a task
+![alt text](screenshots/image3.png)
 
 ## Requirements
 
@@ -14,16 +27,14 @@ See [Set up Forge](https://developer.atlassian.com/platform/forge/set-up-forge/)
 npm install
 ```
 
-- Install dependencies (inside of the `static/hello-world` directory):
+- Install dependencies (inside of the `static/cloud-developer-inverview` directory):
 ```
 npm install
 ```
 
-- Modify your app by editing the files in `static/hello-world/src/`.
-
-- Build your app (inside of the `static/hello-world` directory):
+- Run app in dev mode (inside of the `static/cloud-developer-inverview` directory):
 ```
-npm run build
+npm run dev
 ```
 
 - Deploy your app by running:
@@ -35,6 +46,10 @@ forge deploy
 ```
 forge install
 ```
+
+- Enable tunneling to see app's hot reloading in an Atlassian site
+```
+forge tunnel
 
 ### Notes
 - Use the `forge deploy` command when you want to persist code changes.
