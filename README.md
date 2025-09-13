@@ -50,6 +50,7 @@ forge install
 - Enable tunneling to see app's hot reloading in an Atlassian site
 ```
 forge tunnel
+```
 
 ### Notes
 - Use the `forge deploy` command when you want to persist code changes.
