@@ -1,0 +1,29 @@
+modules:
+  jira:globalPage:
+    - key: jira-global-page-custom-ui-vite
+      resource: main
+      resolver:
+        function: resolver
+      title: Jira Project Assistant
+  function:
+    - key: resolver
+      handler: index.handler
+resources:
+  - key: main
+    path: static/cloud-developer-inverview/dist
+    tunnel:
+      port: 5173
+app:
+  runtime:
+    name: nodejs22.x
+    memoryMB: 256
+    architecture: arm64
+  id: ari:cloud:ecosystem::app/194b91f7-bad2-43bb-90ee-98ae5a314497
+permissions:
+  scopes:
+    - read:jira-user
+    - read:jira-work
+    - write:jira-work
+  content:
+    styles:
+      - 'unsafe-inline'
