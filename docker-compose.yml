@@ -1,11 +1,6 @@
 services:
-  build:
+  forge:
     build:
-      context: .
       dockerfile: Dockerfile
-    volumes:
-      - ./dist:/app/dist
-    environment:
-      - NODE_ENV=production
-      - FORGE_EMAIL=${FORGE_EMAIL}
-      - FORGE_API_TOKEN=${FORGE_API_TOKEN}
+    env_file:
+      - .env
