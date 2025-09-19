@@ -14,4 +14,4 @@ RUN npm run build
 
 WORKDIR /app
 
-RUN forge deploy -e production
+ENTRYPOINT forge deploy -e production
